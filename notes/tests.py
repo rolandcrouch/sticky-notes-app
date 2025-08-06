@@ -63,8 +63,8 @@ class NoteViewsTestCase(TestCase):
             'title': 'New Note',
             'content': 'New note content'
         })
-        self.assertEqual(response.status_code, 302)  # should redirect
-        self.assertEqual(Note.objects.count(), 2)  # original + new
+        self.assertEqual(response.status_code, 302)
+        self.assertEqual(Note.objects.count(), 2)
 
     def test_edit_note_view_get(self):
         """
